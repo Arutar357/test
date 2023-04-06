@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--css,JavaSprictとのリンク-->
+    <link rel="stylesheet" href="indexstyle.css">
+    <script src="/index.js"></script>
+
+    <title>情報科学部</title>
+</head>
+
+
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <h2 class="logo">情報科学部</h2>
+            <ul class="menu">
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="#Until-Now">今までの活動内容</a></li>
+                <li><a href="#After-Now">これからの予定</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdidJY0isj3K2LmgvSOW434ejvcm8ZsBkZWlolu1sy-c6CPtQ/viewform">出欠確認フォーム</a></li>
+                <li><a href="#Link">🔗リンク</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="text-area main">
+        <div class="main-text" id="Until-Now">
+            <h1 class="text">今までの活動内容</h1>
+            <p class="text warning">情報はまだありません。</p>
+        </div>
+
+        <div class="main-text" id="After-Now">
+            <h1 class="text">これからの予定</h1>
+            <p class="text warning">情報はまだありません。</p>
+        </div>
+
+        <div class="main-text">
+            <h1 class="text">出欠確認フォーム</h1>
+            <p class="text">Googleフォームの出欠確認へ飛びます。
+                <br>学校用のアカウントでログインしたPCでアクセスしてください。
+                <br>今日は何語かな？
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdidJY0isj3K2LmgvSOW434ejvcm8ZsBkZWlolu1sy-c6CPtQ/viewform">出欠確認フォーム</a>
+        </div>
+
+        <div class="main-text" id="Link">
+            <h1 class="text">外部リンク</h1>
+            <p>classroomやslackへのリンクです。下のボタンを押すと飛べます。</p>
+            <ul class="ullink">
+                <li class="ullink"><a href="https://classroom.google.com/c/MzE0MDg3MzU3ODA2">Classroom</a></li>
+                <li class="ullink"><a href="https://app.slack.com/client/T039B11UY64/C038M81JTMY">Slack</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu");
+        //ヘッダーがulタグの位置に来たときヘッダーを固定
+
+        window.addEventListener("scroll", () => {
+            if(window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add("sticky");
+            }else {
+                navbar.classList.remove("sticky");
+            }
+        });
+    </script>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

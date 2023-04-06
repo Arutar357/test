@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #00000095;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 3%;
+    transition: 0.5s;
+}
+
+nav.sticky .logo {
+    margin: auto auto auto auto;
+}
+
+nav.sticky ul{
+    background-color: transparent;
+    font-size: 1.3rem;
+}
+
+.logo {
+    width: 150px;
+    margin: 0 auto 20px auto;
+    cursor: 3rem;
+    font-weight: 450;
+    color: #fff;
+}
+
+nav ul {
+    background-color: #00000095;
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.text {
+    padding: 20px 10%;
+}
+
+.main-text {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.ullink {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+
+.main-text a {
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.main-text a::before {
+    background: #15131f;
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+}
+.main-text a:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.warning {
+    color: rgb(107, 107, 107);
+}
+
+#Until-Now:target {
+    animation: high-light 1s;
+}
+
+#After-Now {
+    animation: high-light 1s;
+}
+
+
+
+@keyframes high-light {
+    from {
+        background-color: rgba(255, 255, 0, 0.694);
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
